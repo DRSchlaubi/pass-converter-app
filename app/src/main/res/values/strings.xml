@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">Pass Converter App</string>
+    <string name="app_name" translatable="false">Pass Converter App</string>
+    <string name="converting">Conversion is in Progress</string>
+    <string name="conversion_successful">Conversion was successful</string>
+    <string name="error">API responded with an error code: $1</string>
 </resources>
