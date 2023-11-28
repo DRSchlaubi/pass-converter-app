@@ -29,11 +29,13 @@ class MainActivity : AppCompatActivity() {
         setContent {
             val pickerLauncher =
                 rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) {
-                    val intent = Intent(this, ConvertingActivity::class.java).apply {
-                        data = it
-                    }
+                    if (it != null) {
+                        val intent = Intent(this, ConvertingActivity::class.java).apply {
+                            data = it
+                        }
 
-                    startActivity(intent)
+                        startActivity(intent)
+                    }
                 }
 
             PassConverterAppTheme {
