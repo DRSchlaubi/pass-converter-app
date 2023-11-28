@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.google.wallet.button.ButtonType
 import com.google.wallet.button.WalletButton
 import dev.schlaubi.passconverter.util.rememberHttpClient
 import io.ktor.client.plugins.ResponseException
@@ -159,7 +160,7 @@ class ConvertingActivity : AppCompatActivity() {
                                 Uri.parse(currentState.token),
                             )
                             startActivity(intent)
-                        })
+                        }, type = ButtonType.AddCondensed)
                     }
                 }
             }
