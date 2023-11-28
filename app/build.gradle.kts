@@ -1,6 +1,17 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+}
+
+val properties = Properties()
+
+val file = rootProject.file("local.properties")
+if (file.exists()) {
+    file.bufferedReader().use {
+        properties.load(it)
+    }
 }
 
 android {
@@ -21,8 +32,8 @@ android {
 
     buildTypes {
         all {
-            buildConfigField("String", "API_SERVICE", """"https://pass-converter.schlau.bi"""")
-            buildConfigField("String", "API_KEY", """null""")
+            buildConfigField("String", "API_SERVICE", """"${properties["api.service"]}"""")
+            buildConfigField("String", "API_KEY", """"${properties["api.key"]}"""")
         }
 
         release {
