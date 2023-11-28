@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="converting">Umwandlung in Arbeit</string>
+    <string name="conversion_successful">Umwandlung war erfolgreich</string>
+    <string name="error">API hat mit einem Fehler code geantwortet: $1</string>
+</resources>
