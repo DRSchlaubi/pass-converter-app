@@ -36,7 +36,7 @@ jobs:
         name: Release on Play Store
         with:
           serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
-          packageName: dev.schlaubi.tonbrett.android
+          packageName: dev.schlaubi.passconverter
           status: completed
           releaseFiles: app/build/outputs/bundle/release/app-release.aab
           mappingFile: build/outputs/mapping/release/mapping.txt
