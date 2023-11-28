@@ -16,9 +16,10 @@ jobs:
           distribution: 'temurin'
           java-version: 17
       - name: export secrets
-        run:
+        run: |
           echo "api.service=${{ secrets.API_SERVICE }}" >> local.properties
           echo "api.key=${{ secrets.API_KEY }}" >> local.properties
+          cat local.properties
       - name: Build App Distribution
         uses: gradle/gradle-build-action@v2
         with:

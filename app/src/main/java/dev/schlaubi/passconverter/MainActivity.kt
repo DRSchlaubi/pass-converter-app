@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
                     Icon(Icons.Default.Wallet, null, tint = MaterialTheme.colorScheme.onBackground)
                     Text(stringResource(R.string.welcome), color = MaterialTheme.colorScheme.onBackground)
                     Button(onClick = { pickerLauncher.launch(arrayOf("application/vnd.apple.pkpass")) }) {
-                        Icon(Icons.Default.FileOpen, null, tint = MaterialTheme.colorScheme.onPrimaryContainer)
-                        Text(stringResource(R.string.select_file), color = MaterialTheme.colorScheme.onPrimaryContainer)
+                        Icon(Icons.Default.FileOpen, null, tint = MaterialTheme.colorScheme.onSecondary)
+                        Text(stringResource(R.string.select_file), color = MaterialTheme.colorScheme.onSecondary)
                     }
                 }
             }
