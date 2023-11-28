@@ -3,4 +3,6 @@
     <string name="converting">Umwandlung in Arbeit</string>
     <string name="conversion_successful">Umwandlung war erfolgreich</string>
     <string name="error">API hat mit einem Fehler code geantwortet: $1</string>
+    <string name="welcome">Fange jetzt ann .pkpass Dateien umzuwandeln</string>
+    <string name="select_file">Datei auswählen</string>
 </resources>

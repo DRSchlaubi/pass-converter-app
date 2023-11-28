@@ -3,4 +3,6 @@
     <string name="converting">Conversion is in Progress</string>
     <string name="conversion_successful">Conversion was successful</string>
     <string name="error">API responded with an error code: $1</string>
+    <string name="welcome">Start converting a .pkpass file now</string>
+    <string name="select_file">Select File</string>
 </resources>

@@ -22,7 +22,7 @@ android {
     buildTypes {
         all {
             buildConfigField("String", "API_SERVICE", """"https://pass-converter.schlau.bi"""")
-            buildConfigField("String", "API_KEY", """""")
+            buildConfigField("String", "API_KEY", """null""")
         }
 
         release {
