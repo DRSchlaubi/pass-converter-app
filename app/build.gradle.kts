@@ -22,7 +22,7 @@ android {
         applicationId = "dev.schlaubi.passconverter"
         minSdk = 24
         targetSdk = 34
-        versionCode = System.getenv("GITHUB_RUN_ID")?.toInt() ?: 1
+        versionCode = System.getenv("GITHUB_RUN_NUMBER")?.toInt() ?: 1
         versionName = "1.0"
 
         resourceConfigurations.addAll(listOf("en", "de"))
