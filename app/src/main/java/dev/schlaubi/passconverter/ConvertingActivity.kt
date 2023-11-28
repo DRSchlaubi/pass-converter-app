@@ -104,7 +104,10 @@ class ConvertingActivity : AppCompatActivity() {
             ) {
                 if (state.isLoading) {
                     CircularProgressIndicator()
-                    Text(stringResource(R.string.converting))
+                    Text(
+                        stringResource(R.string.converting),
+                        color = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
                 }
 
                 when (val currentState = state) {
@@ -140,15 +143,21 @@ class ConvertingActivity : AppCompatActivity() {
                     }
 
                     is State.Error -> {
-                        Icon(Icons.Default.Error, null)
-                        Text(stringResource(R.string.error, currentState.code.value))
+                        Icon(Icons.Default.Error, null, tint = MaterialTheme.colorScheme.onPrimaryContainer)
+                        Text(
+                            stringResource(R.string.error, currentState.code.value),
+                            color = MaterialTheme.colorScheme.onPrimaryContainer
+                        )
                     }
 
                     is State.GotToken -> {
-                        Icon(Icons.Default.Wallet, null)
+                        Icon(Icons.Default.Wallet, null, tint = MaterialTheme.colorScheme.onPrimaryContainer)
                         Text(stringResource(R.string.conversion_successful))
                         WalletButton(onClick = {
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(currentState.token))
+                            val intent = Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse(currentState.token),
+                            )
                             startActivity(intent)
                         })
                     }

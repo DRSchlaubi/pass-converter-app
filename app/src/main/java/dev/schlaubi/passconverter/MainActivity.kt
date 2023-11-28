@@ -16,9 +16,7 @@ import androidx.compose.material.icons.filled.Wallet
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -47,10 +45,10 @@ class MainActivity : AppCompatActivity() {
                         .background(MaterialTheme.colorScheme.background)
                 ) {
                     Icon(Icons.Default.Wallet, null)
-                    Text(stringResource(R.string.welcome))
+                    Text(stringResource(R.string.welcome), color = MaterialTheme.colorScheme.onBackground)
                     Button(onClick = { pickerLauncher.launch(arrayOf("application/vnd.apple.pkpass")) }) {
-                        Icon(Icons.Default.FileOpen, null)
-                        Text(stringResource(R.string.select_file))
+                        Icon(Icons.Default.FileOpen, null, tint = MaterialTheme.colorScheme.onBackground)
+                        Text(stringResource(R.string.select_file), color = MaterialTheme.colorScheme.onBackground)
                     }
                 }
             }
