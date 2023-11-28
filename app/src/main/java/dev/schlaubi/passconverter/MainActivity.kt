@@ -44,11 +44,11 @@ class MainActivity : AppCompatActivity() {
                         .fillMaxSize()
                         .background(MaterialTheme.colorScheme.background)
                 ) {
-                    Icon(Icons.Default.Wallet, null)
+                    Icon(Icons.Default.Wallet, null, tint = MaterialTheme.colorScheme.onBackground)
                     Text(stringResource(R.string.welcome), color = MaterialTheme.colorScheme.onBackground)
                     Button(onClick = { pickerLauncher.launch(arrayOf("application/vnd.apple.pkpass")) }) {
-                        Icon(Icons.Default.FileOpen, null, tint = MaterialTheme.colorScheme.onBackground)
-                        Text(stringResource(R.string.select_file), color = MaterialTheme.colorScheme.onBackground)
+                        Icon(Icons.Default.FileOpen, null, tint = MaterialTheme.colorScheme.onPrimaryContainer)
+                        Text(stringResource(R.string.select_file), color = MaterialTheme.colorScheme.onPrimaryContainer)
                     }
                 }
             }
