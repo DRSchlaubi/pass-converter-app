@@ -37,7 +37,7 @@ jobs:
         with:
           serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON }}
           packageName: dev.schlaubi.passconverter
-          status: completed
+          status: draft
           releaseFiles: app/build/outputs/bundle/release/app-release.aab
           mappingFile: app/build/outputs/mapping/release/mapping.txt
           track: internal
